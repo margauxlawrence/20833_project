@@ -1,80 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Project Home</title>
-
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <body>
-        <nav>
+    <title>Project Home</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+  <!-- 
+    PROJECT CONTEXT:
+    This site is built to showcase a data analysis project exploring Spotify streaming behavior
+    in connection with major global events. It’s intentionally simple — clean structure, accessible
+    design, and minimal dependencies (no frameworks or JS).
+  -->
+</head>
+
+<body>
+  <!-- Accessibility feature: allows users with screen readers to skip repetitive navigation -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- 
+    HEADER SECTION:
+    Contains the project title, a short tagline, and navigation links to key sections.
+    Using anchors (#overview, #methodology, etc.) instead of separate pages for simplicity.
+  -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Spotify Streaming Analysis</h1>
+      <p class="site-subtitle">Exploring trends, events, and listening behavior</p>
+
+      <!-- 
+        Navigation links connect to internal sections.
+        You can later turn these into separate .html pages if desired.
+      -->
+      <nav>
             Home |
             <a href="overview">Overview</a> |
             <a href="methodology">Methodology</a> |
             <a href="analysis">Analysis</a> |  
             <a href="findings">Findings</a>
         </nav>
+    </div>
+  </header>
 
-        <h1>Welcome to the Sample HTML Page</h1>
-    
-        <section id="overview">
+  <!-- MAIN CONTENT -->
+  <main id="main">
 
-            <h2>Project Overview</h2>
+    <!-- ======================
+         HOME / INTRO SECTION
+         ======================
+         Introduces the project — what it is, its goals, and placeholders for summary info.
+    -->
+    <section id="home" class="section hero">
+      <div class="container grid-2">
+        <div>
+          <h2>Welcome</h2>
+          <p>
+            This site showcases a data analysis project on Spotify streaming. It summarizes the dataset,
+            methods, and insights discovered during the analysis. Placeholder text appears throughout —
+            you can replace it as your results finalize.
+          </p>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur consequatur vero est! Voluptates, natus excepturi. Repudiandae iusto dolor id ratione magni iure omnis! Illo non modi at dolore nulla fugiat.</p>
+          <!-- Quick bullet points for context -->
+          <ul class="meta-list">
+            <li><strong>Dataset:</strong> Spotify Charts (Global, 2023–2024)</li>
+            <li><strong>Scope:</strong> Weekly top songs and stream counts</li>
+            <li><strong>Goal:</strong> Connect major events to streaming trends</li>
+          </ul>
+        </div>
 
-        </section>
+        <!-- Placeholder area for a chart, photo, or header image -->
+        <figure class="media-placeholder">
+          <div class="img-placeholder" aria-hidden="true">Hero Image / Chart</div>
+          <figcaption>Placeholder: Insert a representative chart or project banner image here.</figcaption>
+        </figure>
+      </div>
+    </section>
 
-        <section id="background">
+    <!-- ======================
+         PROJECT OVERVIEW
+         ======================
+         Explains the research question, data points, and deliverables at a glance.
+    -->
+    <section id="overview" class="section">
+      <div class="container">
+        <h2>Project Overview</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur consequatur vero est!
+          Voluptates, natus excepturi. Repudiandae iusto dolor id ratione magni iure omnis! Illo non modi
+          at dolore nulla fugiat.
+        </p>
 
-            <h2>Background</h2>
+        <!-- 
+          Three small "cards" for structure and scannability.
+          These can later include visuals or links.
+        -->
+        <div class="card-grid">
+          <article class="card">
+            <h3>Research Question</h3>
+            <p>Placeholder: What relationship exists between major events and streaming behavior?</p>
+          </article>
+          <article class="card">
+            <h3>Key Variables</h3>
+            <p>Placeholder: track, artist, rank, streams, date, event marker(s).</p>
+          </article>
+          <article class="card">
+            <h3>Deliverables</h3>
+            <p>Placeholder: written report, visuals, and final findings summary.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
+    <!-- ======================
+         BACKGROUND
+         ======================
+         Context for why the project matters — use for cultural or industry background.
+    -->
+    <section id="background" class="section alt">
+      <div class="container">
+        <h2>Background</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam placeat similique necessitatibus cumque deleniti enim natus debitis cum tempora quibusdam qui ducimus architecto et, dolorum vero rerum obcaecati fugiat nam.
+        </p>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
+        <!-- 
+          Placeholder visuals:
+          These could represent timelines, event screenshots, or pop culture moments.
+        -->
+        <div class="media-row">
+          <figure class="media-placeholder sm">
+            <div class="img-placeholder">Image</div>
+            <figcaption>Placeholder for data source logo or cultural event image.</figcaption>
+          </figure>
+          <figure class="media-placeholder sm">
+            <div class="img-placeholder">Image</div>
+            <figcaption>Placeholder for timeline visual.</figcaption>
+          </figure>
+          <figure class="media-placeholder sm">
+            <div class="img-placeholder">Image</div>
+            <figcaption>Placeholder for contextual photo.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
+    <!-- ======================
+         METHODOLOGY
+         ======================
+         Explains how the data was collected, cleaned, and analyzed.
+         Keep concise; visuals can come later.
+    -->
+    <section id="methodology" class="section">
+      <div class="container">
+        <h2>Methodology</h2>
+        <p>
+          Placeholder: Briefly explain steps like data cleaning, transformation, and visualization.
+        </p>
 
-        </section>
+        <!-- Accordions make info collapsible without needing JS -->
+        <details class="accordion">
+          <summary>Data Collection</summary>
+          <p>Placeholder: Explain where and when the data was pulled.</p>
+        </details>
 
-        <img src="images/IMG_6249.JPG" alt="group of girls posing together in front of a banner that says Chi O victory formal and wearing short colorful formal dresses and cowboys boots or gold heels" width="100%">
+        <details class="accordion">
+          <summary>Cleaning & Preprocessing</summary>
+          <p>Placeholder: Outline how you handled missing values, duplicates, or inconsistent artist names.</p>
+        </details>
 
-        <section id="methodology">
+        <details class="accordion">
+          <summary>Analysis Techniques</summary>
+          <p>Placeholder: Describe calculations or tools used (e.g., Python, Pandas, Matplotlib).</p>
+        </details>
 
-            <h2>Methodology</h2>
+        <!-- Example dataset table placeholder -->
+        <div class="table-wrap">
+          <h3>Sample Data</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Week</th>
+                <th>Track</th>
+                <th>Artist</th>
+                <th>Rank</th>
+                <th>Streams</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2023-01-06</td>
+                <td>Kill Bill</td>
+                <td>SZA</td>
+                <td>1</td>
+                <td>41,474,366</td>
+              </tr>
+              <tr>
+                <td>2023-01-06</td>
+                <td>Unholy</td>
+                <td>Sam Smith, Kim Petras</td>
+                <td>2</td>
+                <td>33,132,175</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
+    <!-- ======================
+         ANALYSIS
+         ======================
+         Summarizes visual findings and insights.
+         Replace placeholders with your actual charts later.
+    -->
+    <section id="analysis" class="section alt">
+      <div class="container">
+        <h2>Analysis</h2>
+        <p>Placeholder: Describe how patterns emerged or events affected streams.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo porro quos tempore voluptas voluptate doloremque architecto sapiente eaque, et dignissimos esse repellendus animi suscipit aliquid consequuntur optio natus sint placeat!</p>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
+        <div class="grid-2">
+          <figure class="media-placeholder tall">
+            <div class="img-placeholder">Line Chart</div>
+            <figcaption>Placeholder for time-series visualization.</figcaption>
+          </figure>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
+          <figure class="media-placeholder tall">
+            <div class="img-placeholder">Heatmap</div>
+            <figcaption>Placeholder for another graph.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
 
-        </section>
+    <!-- ======================
+         FINDINGS
+         ======================
+         Final insights and conclusions.
+         Optionally include takeaways or recommendations.
+    -->
+    <section id="findings" class="section">
+      <div class="container">
+        <h2>Findings</h2>
+        <p>Placeholder: Highlight main patterns, surprises, or future research directions.</p>
 
-        <section id="analysis">
+        <div class="card-grid">
+          <article class="card">
+            <h3>Finding #1</h3>
+            <p>Example: Streaming spikes correlate strongly with major pop culture events.</p>
+          </article>
+          <article class="card">
+            <h3>Finding #2</h3>
+            <p>Example: Emotional songs surged following global crises or viral moments.</p>
+          </article>
+          <article class="card">
+            <h3>Finding #3</h3>
+            <p>Example: Certain genres show slower recovery trends after event peaks.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-            <h2>Analysis</h2>
+  <!-- ======================
+       FOOTER
+       ======================
+       Keeps navigation consistent and provides credit.
+  -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <p>&copy; 2025 Spotify Streaming Analysis Project</p>
+      <nav aria-label="Footer">
+        <a href="#home">Back to top</a>
+        <a href="#methodology">Data & Methods</a>
+        <a href="#findings">Findings</a>
+      </nav>
+    </div>
+  </footer>
 
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
-
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
-
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
-
-        </section>
-
-        <section id="findings">
-
-            <h2>Findings</h2>
-
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
-
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
-
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, voluptates alias repellendus ex ad totam minima et consequatur at id inventore reprehenderit distinctio, voluptatibus exercitationem reiciendis molestiae? Inventore, mollitia.</p>
-
-        </section>
-    </body>
+</body>
 </html>

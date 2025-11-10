@@ -1,0 +1,229 @@
+/* 
+  🎨 STYLE GUIDE — Spotify Streaming Project
+  -------------------------------------------------------------------
+  Updated to include Spotify’s brand color (#1DB954) in a gradient header.
+  The design keeps readability high while reflecting Spotify’s visual identity.
+*/
+
+:root {
+  /* Spotify-inspired palette */
+  --spotify-green: #1DB954;   /* Primary Spotify brand color */
+  --spotify-dark: #191414;    /* Deep black-green background */
+  --spotify-light: #1ed760;   /* Lighter green accent */
+
+  /* Core UI colors */
+  --bg: #0f1115;
+  --panel: #151821;
+  --alt: #0b0d12;
+  --text: #e9edf1;
+  --muted: #b7c1cc;
+  --border: #232839;
+  --shadow: 0 6px 24px rgba(0,0,0,.25);
+}
+
+/* Global Resets and Text */
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(180deg, var(--spotify-dark), var(--alt));
+  color: var(--text);
+  line-height: 1.6;
+}
+.container { width: min(1100px, 92%); margin: 0 auto; }
+
+/* Accessibility Skip Link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: var(--spotify-green);
+  color: #000;
+  padding: .5rem .75rem;
+  border-radius: .5rem;
+}
+
+/* ==========================
+   HEADER & NAVIGATION
+   ==========================
+   The gradient here uses Spotify’s green (#1DB954) fading into black.
+   This gives a sleek header bar reminiscent of the Spotify desktop app.
+*/
+.site-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(135deg, var(--spotify-green), var(--spotify-dark));
+  color: white;
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+.site-title { margin: 0; font-size: clamp(1.5rem, 2.6vw, 2.2rem); }
+.site-subtitle { color: #d1d1d1; }
+
+/* Nav layout */
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  padding: .75rem 0 1rem;
+}
+.site-nav a {
+  text-decoration: none;
+  color: white;
+  padding: .35rem .7rem;
+  border-radius: .5rem;
+  transition: background 0.2s ease;
+}
+.site-nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+.site-nav a.active {
+  background: white;
+  color: var(--spotify-dark);
+  font-weight: 700;
+}
+
+/* ==========================
+   SECTION LAYOUTS
+   ========================== */
+.section { padding: 3rem 0; }
+.section.alt {
+  background: #0d101a;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.section h2 {
+  border-left: 6px solid var(--spotify-green);
+  padding-left: .6rem;
+}
+
+/* ==========================
+   GRID STRUCTURE
+   ========================== */
+.grid-2 {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 860px) {
+  .grid-2 { grid-template-columns: 1.1fr .9fr; }
+}
+
+/* ==========================
+   CARDS
+   ========================== */
+.card-grid {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 780px) {
+  .card-grid { grid-template-columns: repeat(3, 1fr); }
+}
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+  border-color: var(--spotify-green);
+}
+
+/* ==========================
+   PLACEHOLDER VISUALS
+   ========================== */
+.media-placeholder .img-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  background: repeating-linear-gradient(
+    45deg,
+    #131726,
+    #131726 10px,
+    #1a1f33 10px,
+    #1a1f33 20px
+  );
+  border: 1px dashed #2b3350;
+  display: grid;
+  place-items: center;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+/* Smaller placeholders */
+.media-row {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 760px) {
+  .media-row { grid-template-columns: 1fr; }
+}
+
+/* ==========================
+   ACCORDIONS
+   ========================== */
+.accordion {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: .75rem 1rem;
+  margin: .75rem 0;
+}
+.accordion summary {
+  cursor: pointer;
+  font-weight: 700;
+  color: var(--spotify-light);
+}
+
+/* ==========================
+   TABLES
+   ========================== */
+.table-wrap { overflow-x: auto; margin-top: 1rem; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--panel);
+  border-radius: 12px;
+}
+th, td {
+  padding: .75rem .9rem;
+  text-align: left;
+  white-space: nowrap;
+}
+thead {
+  background: var(--spotify-dark);
+  color: var(--spotify-green);
+}
+tbody tr + tr { border-top: 1px solid var(--border); }
+
+/* ==========================
+   FOOTER
+   ========================== */
+.site-footer {
+  padding: 2rem 0;
+  background: var(--spotify-dark);
+  border-top: 2px solid var(--spotify-green);
+  text-align: center;
+}
+.footer-grid {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.site-footer a {
+  color: var(--spotify-green);
+  text-decoration: none;
+  transition: color .2s ease;
+}
+.site-footer a:hover {
+  color: var(--spotify-light);
+}
