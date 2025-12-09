@@ -37,7 +37,9 @@
             <a href="#overview">Overview</a> |
             <a href="#methodology">Methodology</a> |
             <a href="#analysis">Analysis</a> |
-            <a href="#findings">Findings</a>
+            <a href="#findings">Findings</a> |
+            <a href="#roles">Group Roles</a> |
+            <a href="#reflection">Reflection</a>
         </nav>
     </div>
   </header>
@@ -95,15 +97,15 @@
         <div class="card-grid">
           <article class="card">
             <h3>Research Question</h3>
-            <p>Placeholder: What relationship exists between major events and streaming behavior?</p>
+            <p>What relationship exists between major events and streaming behavior on Spotify?</p>
           </article>
           <article class="card">
             <h3>Key Variables</h3>
-            <p>Placeholder: track, artist, rank, streams, date, event marker(s).</p>
+            <p>Text-based sentiment of song titles, audio sentiment (danceability, BPM, valence), streams, artist, and release timing.</p>
           </article>
           <article class="card">
             <h3>Deliverables</h3>
-            <p>Placeholder: written report, visuals, and final findings summary.</p>
+            <p>Written report, visuals, sentiment and topic modeling results, and a final web portfolio summarizing findings.</p>
           </article>
         </div>
       </div>
@@ -152,7 +154,7 @@
       <div class="container">
         <h2>Methodology</h2>
         <p>
-          Placeholder: Briefly explain steps like data cleaning, transformation, and visualization.
+          We collected and cleaned Spotify chart data, then combined descriptive statistics with text-based and audio-based sentiment analysis. After building sentiment scores for song titles and for musical features like danceability and BPM, we used grouping and visualization to compare mood across different time periods and event windows.
         </p>
 
         <!-- Accordions make info collapsible without needing JS -->
@@ -168,7 +170,20 @@
 
         <details class="accordion">
           <summary>Analysis Techniques</summary>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum vel impedit qui quod autem labore in est amet, nesciunt deserunt delectus fuga quae soluta? Quos, deserunt. Assumenda aut rem dignissimos.</p>
+          <p>
+            We used two complementary forms of sentiment analysis:
+          </p>
+          <ul>
+            <li>
+              <strong>Text-based sentiment:</strong> We cleaned song titles (lowercasing, removing punctuation, and filtering out stopwords) and then applied the VADER sentiment analyzer to generate a score from -1 (very negative) to +1 (very positive).
+            </li>
+            <li>
+              <strong>Audio-based sentiment:</strong> We combined Spotify’s audio features—especially <code>danceability_%</code>, normalized <code>bpm</code>, and <code>valence_%</code>—into a custom “audio sentiment” score that reflects how energetic and positive each track sounds.
+            </li>
+          </ul>
+          <p>
+            We then grouped sentiment scores by release year, release month, BPM ranges, and danceability ranges to see how mood and energy shift across time and event windows.
+          </p>
         </details>
 
         <!-- Example dataset table placeholder -->
@@ -259,6 +274,62 @@
       </div>
     </section>
 
+    <!-- ======================
+         GROUP ROLES & RESPONSIBILITIES
+         ======================
+    -->
+    <section id="roles" class="section alt">
+      <div class="container">
+        <h2>Group Roles &amp; Responsibilities</h2>
+        <p>
+          This project was completed as a group, with each member taking on specific responsibilities based on their strengths. 
+          Dividing the work helped us stay organized and allowed each part of the project to be completed with care, while still 
+          working together to connect the different pieces into a cohesive final result. We spent weeks and had multiple meetings 
+          outside of class to discuss, analyze, and finalize the project.
+        </p>
+
+        <details class="accordion">
+          <summary>Margaux &mdash; Sentiment Analysis, Findings, Portfolio</summary>
+          <p>
+            Margaux focused on sentiment analysis, the findings section, and the project portfolio. She used Python to analyze 
+            sentiment in two ways: text-based sentiment from song titles and audio-based sentiment using danceability, BPM, 
+            and valence. She grouped these sentiment scores by release month and musical characteristics to look for patterns 
+            over time. Margaux also helped interpret what the results meant in relation to major global events and summarized 
+            these insights in the Findings section. In addition, she designed and organized the portfolio website to clearly 
+            present the analysis and visuals.
+          </p>
+        </details>
+
+        <details class="accordion">
+          <summary>Annabel &mdash; Data, Term Frequency, Citations</summary>
+          <p>
+            Annabel was responsible for data preparation, term-frequency analysis, and several core Python components. She 
+            worked with both the raw and cleaned datasets to ensure accuracy and consistency throughout the project. Annabel 
+            analyzed word frequency in song titles to identify common themes and shifts across different time periods. She also 
+            broke larger Python scripts into smaller, more readable sections. Along with her technical work, Annabel developed 
+            the research question and handled citations to ensure sources were properly documented.
+          </p>
+        </details>
+
+        <details class="accordion">
+          <summary>Sophia &mdash; Structure, Methods, Topic Modeling</summary>
+          <p>
+            Sophia focused on the overall structure, methodology, and reflection portions of the project. She wrote the Overview, 
+            Methods, and Integration and Reflection sections, helping explain the purpose of the project and how the analysis was 
+            conducted. Sophia also completed the topic modeling portion of the analysis, grouping song titles into themes to add 
+            another layer of interpretation beyond sentiment. Her work helped connect the technical results to broader course 
+            concepts.
+          </p>
+        </details>
+
+        <p>
+          Although responsibilities were divided, the project was highly collaborative. We regularly discussed results and 
+          interpretations together, especially when analyzing trends or connecting findings to real-world events. This shared 
+          approach helped ensure that the final project was consistent, balanced, and reflective of all group members’ contributions.
+        </p>
+      </div>
+    </section>
+
     <section id="reflection" class="section">
       <div class="container">
         <h2>Integration and Reflection</h2>
@@ -282,6 +353,7 @@
   -->
   <footer class="site-footer">
     <div class="container footer-grid">
+      <p>Created by: Margaux Lawrence, Annabel Thompson, and Sophia Taglione</p>
       <p>&copy; 2025 Spotify Streaming Analysis Project</p>
       
       <nav aria-label="Footer">
