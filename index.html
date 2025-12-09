@@ -1,366 +1,408 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Project Home</title>
-    
-    <link rel="stylesheet" href="css/style.css">
-
-  <!-- 
-    PROJECT CONTEXT:
-    This site is built to showcase a data analysis project exploring Spotify streaming behavior
-    in connection with major global events. It’s intentionally simple — clean structure, accessible
-    design, and minimal dependencies (no frameworks or JS).
-  -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Streaming Analysis</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!-- Accessibility feature: allows users with screen readers to skip repetitive navigation -->
-  <a class="skip-link" href="#main">Skip to content</a>
+<a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- 
-    HEADER SECTION:
-    Contains the project title, a short tagline, and navigation links to key sections.
-    Using anchors (#overview, #methodology, etc.) instead of separate pages for simplicity.
-  -->
-  <header class="site-header">
+<header class="site-header">
+  <div class="container">
+    <h1 class="site-title">Spotify Streaming Analysis</h1>
+    <nav>
+      <ul>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#methodology">Methods</a></li>
+        <li><a href="#roles">Group Roles</a></li>
+        <li><a href="#findings">Findings</a></li>
+        <li><a href="#reflection">Reflection</a></li>
+        <li><a href="#citations">Citations</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- OVERVIEW + RESEARCH QUESTION -->
+  <section id="overview" class="section">
     <div class="container">
-      <h1 class="site-title">Spotify Streaming Analysis</h1>
+      <h2>Project Overview</h2>
 
-      <!-- 
-        Navigation links connect to internal sections.
-      -->
-        <nav>
-            <a href="#home">Home</a> |
-            <a href="#overview">Overview</a> |
-            <a href="#methodology">Methodology</a> |
-            <a href="#analysis">Analysis</a> |
-            <a href="#findings">Findings</a> |
-            <a href="#roles">Group Roles</a> |
-            <a href="#reflection">Reflection</a>
-        </nav>
+      <p>
+        	This project examines the relationship between major global events and the types of songs people stream on Spotify, utilizing computational tools to understand how cultural moments influence collective listening habits. Building on the text-analysis workflow we developed earlier in the semester, this project combines quantitative coding methods with humanistic interpretation to examine whether listeners tend to gravitate toward specific musical qualities, such as energy, mood, and language, during times of celebration, crisis, or uncertainty. By connecting musical trends to real-world events, the study aims to understand how people use music not just as entertainment but as an emotional outlet that reflects the cultural atmosphere around them.
+      </p>
+
+      <p>
+        To investigate this, we focus on four significant events that span very different emotional contexts: the Barbenheimer release in July 2023, the onset of the Hamas–Israel conflict in October 2023, the Maui wildfires in August 2023, and the Eastern Australian floods in March 2022. These moments include both high-energy, upbeat cultural hype and sudden, distressing crises. By comparing streaming patterns surrounding these events, we aim to see whether shifts in mood, energy levels, and even language choice are detectable in the most-streamed global songs during each period.
+      </p>
+
+      <!-- TIMELINE -->
+      <div class="timeline">
+        <ol class="timeline-list">
+          <li class="timeline-item"><strong>March 2022</strong> Eastern Australian floods</li>
+          <li class="timeline-item"><strong>July 2023</strong> Barbenheimer release</li>
+          <li class="timeline-item"><strong>August 2023</strong> Maui wildfires</li>
+          <li class="timeline-item"><strong>October 2023</strong> Hamas–Israel conflict</li>
+        </ol>
+      </div>
+
+      <p>
+        This project builds directly from our HW4-1, HW4-2, and HW5 work, but expands the scope by integrating term-frequency analysis, sentiment analysis, topic modeling, and close reading. Together, these methods allow us to move from simple numerical observations to a more complex, human-centered interpretation of music and culture, capturing what happens when coding meets real emotional experiences in the world.
+      </p>
     </div>
-  </header>
+  </section>
 
-  <!-- MAIN CONTENT -->
-  <main id="main">
+  <!-- RESEARCH QUESTION -->
+  <section id="research-question" class="section alt">
+  <div class="container">
+    <h2>Research Question</h2>
 
-    <!-- ======================
-         HOME / INTRO SECTION
-         ======================
-         Introduces the project — what it is, its goals, and placeholders for summary info.
-    -->
-    <section id="home" class="section hero">
-      <div class="container grid-2">
-        <div>
-          <h2>Welcome</h2>
-          <p>
-            This site showcases a data analysis project on Spotify streaming. It summarizes the dataset,
-            methods, and insights discovered during the analysis. Placeholder text appears throughout —
-            you can replace it as your results finalize.
-          </p>
+    <p>
+      This project examines how major current events influence the types of songs people stream
+      on Spotify, with a focus on musical attributes such as energy, mood, and language.
+    </p>
 
-          <!-- Quick bullet points for context -->
-          <ul class="meta-list">
-            <li><strong>Dataset:</strong> Spotify Charts (Global, 2023–2024)</li>
-            <li><strong>Scope:</strong> Weekly top songs and stream counts</li>
-            <li><strong>Goal:</strong> Connect major events to streaming trends</li>
-          </ul>
-        </div>
+    <p>
+      The central research question guiding this analysis asks:
+    </p>
 
-        <!-- Spotify Logo -->
-        <img src="images/spotify-logo.png" alt="Spotify Logo, green and white transparent background" class="hero-image" width="50%"> 
-      </div>
-    </section>
+    <blockquote>
+      <strong>
+        How do major current events influence the types of songs people stream on Spotify,
+        in terms of musical attributes like energy, mood, and language?
+      </strong>
+    </blockquote>
 
-    <!-- ======================
-         PROJECT OVERVIEW
-         ======================
-         Explains the research question, data points, and deliverables at a glance.
-    -->
-    <section id="overview" class="section">
-      <div class="container">
-        <h2>Project Overview</h2>
+    <p>
+      To explore this question, the analysis compares streaming data surrounding four key moments:
+      the Barbenheimer release in July 2023, the beginning of the Hamas–Israel conflict in October 2023,
+      the Maui wildfires in August 2023, and the Eastern Australian floods in March 2022.
+    </p>
+
+    <p>
+      Each event represents a different emotional context, ranging from celebratory and lighthearted
+      to deeply distressing. By examining attributes such as BPM, valence, and danceability before,
+      during, and after each event, this research aims to understand how listeners use music to
+      process collective emotional experiences.
+    </p>
+  </div>
+</section>
+
+  <section id="methodology" class="section alt">
+  <div class="container">
+    <h2>Methods</h2>
+
+    <!-- Short visible summary -->
+    <p>
+      To examine how major cultural events may influence the types of songs listeners gravitate toward
+      on Spotify, we designed a methodological approach that blended computational analysis with
+      humanistic interpretation.
+    </p>
+
+    <!-- DROPDOWN 1: Overall Approach -->
+    <details class="accordion">
+      <summary>Methodological Approach</summary>
+      <p>
+        To answer our research question about how major cultural events might influence the types of
+        songs listeners gravitate toward on Spotify, we designed a methodological approach that
+        integrated computational analysis with humanistic interpretation. Because our dataset
+        contained both numerical musical attributes—such as energy, valence, and danceability—and
+        short text fields, primarily song titles, we selected methods that allowed us to examine
+        emotional tone, patterns in language, and thematic groupings at scale. These are insights
+        that traditional close reading alone could not reveal.
+      </p>
+      <p>
+        Our methods included exploratory data analysis, term frequency analysis, sentiment analysis
+        using VADER, and topic modeling using Gensim’s LDA algorithm. Each method was chosen to serve
+        a distinct purpose within the broader goal of understanding emotional listening behavior
+        during different cultural moments.
+      </p>
+    </details>
+
+    <!-- DROPDOWN 2: Data Cleaning + Exploration -->
+    <details class="accordion">
+      <summary>Data Cleaning and Exploratory Analysis</summary>
+      <p>
+        We began by thoroughly cleaning the “Spotify Most Streamed Songs” dataset. Although the
+        dataset was already structured and relatively clean, it still contained inconsistencies
+        that could interfere with text-based analysis. Song titles included punctuation,
+        parentheses, featured-artist labels, numbers, and stylistic formatting that would distort
+        the results of term frequency analysis and topic modeling.
+      </p>
+      <p>
+        To address these issues, we lowercased all song titles, removed punctuation, stripped common
+        formatting elements such as “feat.”, and created a tailored list of custom stopwords that
+        extended beyond the standard English stopword list. This list included pronouns, filler
+        verbs, numbers, and ambiguous terms commonly used in music titles that did not contribute
+        meaningful emotional or thematic information. While this cleaning process was more
+        intensive than expected, it significantly improved the clarity of the patterns that later
+        emerged from our models.
+      </p>
+      <p>
+        Once the dataset was cleaned, we conducted exploratory visualizations to understand the
+        distribution of key musical features. This included generating histograms for energy and
+        valence, two attributes closely tied to the emotional tone of a song. These visualizations
+        helped establish a baseline emotional profile of the most-streamed songs overall, allowing
+        us to later contextualize how different musical moods align with different types of
+        cultural events.
+      </p>
+    </details>
+
+    <!-- DROPDOWN 3: Text Analysis, Topic Modeling, and Limitations -->
+    <details class="accordion">
+      <summary>Text Analysis, Topic Modeling, and Limitations</summary>
+      <p>
+        We selected term frequency analysis as our first text-based method because it provided an
+        accessible way to identify which words appeared most frequently across song titles. Given
+        that song titles are often extremely short, this method allowed us to observe shared
+        vocabulary without overinterpreting sparse text. While term frequency analysis alone could
+        not capture deeper thematic meaning, it helped reveal repeated ideas and informed the
+        direction of subsequent analyses.
+      </p>
+      <p>
+        We then applied VADER sentiment analysis to measure the emotional tone of song titles.
+        Because VADER is designed to evaluate short, informal text, it was well suited to our
+        dataset. Sentiment analysis played a central role in addressing our research question by
+        allowing us to quantify positivity, negativity, and neutrality in a consistent and
+        reproducible way. Although we acknowledged that VADER cannot capture metaphor, sarcasm,
+        or nuance, it added an important interpretive layer that complemented numerical musical
+        features.
+      </p>
+      <p>
+        The most complex method we employed was topic modeling using Gensim’s LDA algorithm.
+        Applying LDA to song titles presented challenges, as the model typically performs best on
+        longer texts with richer context. To mitigate this, we created a dictionary and corpus
+        from our cleaned tokens and selected a modest number of topics to avoid overfitting. While
+        the resulting topics were not always sharply defined, they nonetheless revealed recurring
+        motifs such as breakup themes, emotional introspection, and upbeat or hype-oriented titles.
+        Importantly, this method emphasized that while computational models can identify structural
+        patterns, human interpretation remains essential for understanding their cultural meaning.
+      </p>
+      <p>
+        Throughout the process, we remained aware of several limitations. The dataset was not tied
+        directly to the specific events we analyzed, meaning we were not measuring real-time
+        changes in listening behavior. Instead, we used the events as conceptual anchors to
+        understand broader emotional patterns in popular music. Additionally, the brevity of song
+        titles limited the depth of textual analysis. Despite these constraints, the combination
+        of numerical features, sentiment scores, topic clusters, and term-frequency patterns
+        provided a multi-layered perspective on emotional tone in widely streamed songs.
+      </p>
+      <p>
+        To reflect honestly on our process, we occasionally used AI tools to clarify conceptual
+        misunderstandings or troubleshoot technical errors. However, all data cleaning, coding,
+        analysis, visualization, and interpretive decision-making were completed by the group.
+        The learning occurred through direct engagement with the work, and this methods section
+        accurately represents the process followed from raw data to meaningful insight.
+      </p>
+    </details>
+
+  </div>
+</section>
+
+  <!-- GROUP ROLES -->
+  <section id="roles" class="section alt">
+    <div class="container">
+      <h2>Group Roles &amp; Responsibilities</h2>
+
+      <p>
+        	This project was completed as a group, with each member taking on specific responsibilities based on their strengths. Dividing the work helped us stay organized and allowed each part of the project to be completed with care, while still working together to connect the different pieces into a cohesive final result. We spent weeks and had multiple meetings outside of class to discuss, analyze, and finalize the project. 
+      </p>
+
+      <details class="accordion">
+        <summary>Margaux Lawrence</summary>
         <p>
-          This project examines the relationship between major global events and the types of songs people stream on Spotify, utilizing computational tools to understand how cultural moments influence collective listening habits. Building on the text-analysis workflow we developed earlier in the semester, this project combines quantitative coding methods with humanistic interpretation to examine whether listeners tend to gravitate toward specific musical qualities, such as energy, mood, and language, during times of celebration, crisis, or uncertainty. By connecting musical trends to real-world events, the study aims to understand how people use music not just as entertainment but as an emotional outlet that reflects the cultural atmosphere around them. 
+          Margaux focused on sentiment analysis, the findings section, and the project portfolio. She used Python to analyze sentiment in two ways: text-based sentiment from song titles and audio-based sentiment using danceability, BPM, and valence. She grouped these sentiment scores by release month and musical characteristics to look for patterns over time. Margaux also helped interpret what the results meant in relation to major global events and summarized these insights in the Findings section. In addition, she designed and organized the portfolio website to clearly present the analysis and visuals.
         </p>
+      </details>
+
+      <details class="accordion">
+        <summary>Annabel Thompson</summary>
         <p>
-          To investigate this, we focus on four significant events that span very different emotional contexts: the Barbenheimer release in July 2023, the onset of the Hamas–Israel conflict in October 2023, the Maui wildfires in August 2023, and the Eastern Australian floods in March 2022. These moments include both high-energy, upbeat cultural hype and sudden, distressing crises. By comparing streaming patterns surrounding these events, we aim to see whether shifts in mood, energy levels, and even language choice are detectable in the most-streamed global songs during each period. This project builds directly from our HW4-1, HW4-2, and HW5 work, but expands the scope by integrating term-frequency analysis, sentiment analysis, topic modeling, and close reading. Together, these methods allow us to move from simple numerical observations to a more complex, human-centered interpretation of music and culture, capturing what happens when coding meets real emotional experiences in the world.
+          Annabel was responsible for data preparation, term-frequency analysis, and several core Python components. She worked with both the raw and cleaned datasets to ensure accuracy and consistency throughout the project. Annabel analyzed word frequency in song titles to identify common themes and shifts across different time periods. She also broke larger Python scripts into smaller, more readable sections. Along with her technical work, Annabel developed the research question and handled citations to ensure sources were properly documented.
         </p>
+      </details>
 
-        <!-- 
-          Three small "cards" for structure and scannability.
-          These can later include visuals or links.
-        -->
-        <div class="card-grid">
-          <article class="card">
-            <h3>Research Question</h3>
-            <p>What relationship exists between major events and streaming behavior on Spotify?</p>
-          </article>
-          <article class="card">
-            <h3>Key Variables</h3>
-            <p>Text-based sentiment of song titles, audio sentiment (danceability, BPM, valence), streams, artist, and release timing.</p>
-          </article>
-          <article class="card">
-            <h3>Deliverables</h3>
-            <p>Written report, visuals, sentiment and topic modeling results, and a final web portfolio summarizing findings.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================
-         BACKGROUND
-         ======================
-         Context for why the project matters — use for cultural or industry background.
-    -->
-    <section id="background" class="section alt">
-      <div class="container">
-        <h2>Background</h2>
+      <details class="accordion">
+        <summary>Sophia Taglione</summary>
         <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam placeat similique necessitatibus cumque deleniti enim natus debitis cum tempora quibusdam qui ducimus architecto et, dolorum vero rerum obcaecati fugiat nam.
+          Sophia focused on the overall structure, methodology, and reflection portions of the project. She wrote the Overview, Methods, and Integration and Reflection sections, helping explain the purpose of the project and how the analysis was conducted. Sophia also completed the topic modeling portion of the analysis, grouping song titles into themes to add another layer of interpretation beyond sentiment. Her work helped connect the technical results to broader course concepts.
         </p>
+      </details>
 
-        <!-- 
-          Placeholder visuals:
-          These could represent timelines, event screenshots, or pop culture moments.
-        -->
-        <div class="media-row">
-          <figure class="media-placeholder sm">
-            <div class="img-placeholder">Image</div>
-            <figcaption>Placeholder for data source logo or cultural event image.</figcaption>
-          </figure>
-          <figure class="media-placeholder sm">
-            <div class="img-placeholder">Image</div>
-            <figcaption>Placeholder for timeline visual.</figcaption>
-          </figure>
-          <figure class="media-placeholder sm">
-            <div class="img-placeholder">Image</div>
-            <figcaption>Placeholder for contextual photo.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================
-         METHODOLOGY
-         ======================
-         Explains how the data was collected, cleaned, and analyzed.
-         Keep concise; visuals can come later.
-    -->
-    <section id="methodology" class="section">
-      <div class="container">
-        <h2>Methodology</h2>
-        <p>
-          We collected and cleaned Spotify chart data, then combined descriptive statistics with text-based and audio-based sentiment analysis. After building sentiment scores for song titles and for musical features like danceability and BPM, we used grouping and visualization to compare mood across different time periods and event windows.
-        </p>
-
-        <!-- Accordions make info collapsible without needing JS -->
-        <details class="accordion">
-          <summary>Data Collection</summary>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi dolorum nemo ad velit a voluptatibus minima expedita adipisci quis, iste ex totam, animi atque consequatur corporis nostrum necessitatibus autem mollitia!</p>
-        </details>
-
-        <details class="accordion">
-          <summary>Cleaning & Preprocessing</summary>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui harum quasi neque earum odit, laboriosam, beatae amet cum ratione voluptatibus voluptas provident commodi quae facilis esse quos. Nesciunt, quaerat perspiciatis.</p>
-        </details>
-
-        <details class="accordion">
-          <summary>Analysis Techniques</summary>
-          <p>
-            We used two complementary forms of sentiment analysis:
-          </p>
-          <ul>
-            <li>
-              <strong>Text-based sentiment:</strong> We cleaned song titles (lowercasing, removing punctuation, and filtering out stopwords) and then applied the VADER sentiment analyzer to generate a score from -1 (very negative) to +1 (very positive).
-            </li>
-            <li>
-              <strong>Audio-based sentiment:</strong> We combined Spotify’s audio features—especially <code>danceability_%</code>, normalized <code>bpm</code>, and <code>valence_%</code>—into a custom “audio sentiment” score that reflects how energetic and positive each track sounds.
-            </li>
-          </ul>
-          <p>
-            We then grouped sentiment scores by release year, release month, BPM ranges, and danceability ranges to see how mood and energy shift across time and event windows.
-          </p>
-        </details>
-
-        <!-- Example dataset table placeholder -->
-        <div class="table-wrap">
-          <h3>Sample Data</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Week</th>
-                <th>Track</th>
-                <th>Artist</th>
-                <th>Rank</th>
-                <th>Streams</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>2023-01-06</td>
-                <td>Kill Bill</td>
-                <td>SZA</td>
-                <td>1</td>
-                <td>41,474,366</td>
-              </tr>
-              <tr>
-                <td>2023-01-06</td>
-                <td>Unholy</td>
-                <td>Sam Smith, Kim Petras</td>
-                <td>2</td>
-                <td>33,132,175</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================
-         ANALYSIS
-         ======================
-         Summarizes visual findings and insights.
-         Replace placeholders with your actual charts later.
-    -->
-    <section id="analysis" class="section alt">
-      <div class="container">
-        <h2>Analysis</h2>
-        <p>Placeholder: Describe how patterns emerged or events affected streams.</p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo porro quos tempore voluptas voluptate doloremque architecto sapiente eaque, et dignissimos esse repellendus animi suscipit aliquid consequuntur optio natus sint placeat!</p>
-
-        <div class="grid-2">
-          <figure class="media-placeholder tall">
-            <div class="img-placeholder">Line Chart</div>
-            <figcaption>Placeholder for time-series visualization.</figcaption>
-          </figure>
-
-          <figure class="media-placeholder tall">
-            <div class="img-placeholder">Heatmap</div>
-            <figcaption>Placeholder for another graph.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================
-         FINDINGS
-         ======================
-         Final insights and conclusions.
-         Optionally include takeaways or recommendations.
-    -->
-    <section id="findings" class="section">
-      <div class="container">
-        <h2>Findings</h2>
-        <p>Placeholder: Highlight main patterns, surprises, or future research directions.</p>
-
-        <div class="card-grid">
-          <article class="card">
-            <h3>Finding #1</h3>
-            <p>Example: Streaming spikes correlate strongly with major pop culture events.</p>
-          </article>
-          <article class="card">
-            <h3>Finding #2</h3>
-            <p>Example: Emotional songs surged following global crises or viral moments.</p>
-          </article>
-          <article class="card">
-            <h3>Finding #3</h3>
-            <p>Example: Certain genres show slower recovery trends after event peaks.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- ======================
-         GROUP ROLES & RESPONSIBILITIES
-         ======================
-    -->
-    <section id="roles" class="section alt">
-      <div class="container">
-        <h2>Group Roles &amp; Responsibilities</h2>
-        <p>
-          This project was completed as a group, with each member taking on specific responsibilities based on their strengths. 
-          Dividing the work helped us stay organized and allowed each part of the project to be completed with care, while still 
-          working together to connect the different pieces into a cohesive final result. We spent weeks and had multiple meetings 
-          outside of class to discuss, analyze, and finalize the project.
-        </p>
-
-        <details class="accordion">
-          <summary>Margaux &mdash; Sentiment Analysis, Findings, Portfolio</summary>
-          <p>
-            Margaux focused on sentiment analysis, the findings section, and the project portfolio. She used Python to analyze 
-            sentiment in two ways: text-based sentiment from song titles and audio-based sentiment using danceability, BPM, 
-            and valence. She grouped these sentiment scores by release month and musical characteristics to look for patterns 
-            over time. Margaux also helped interpret what the results meant in relation to major global events and summarized 
-            these insights in the Findings section. In addition, she designed and organized the portfolio website to clearly 
-            present the analysis and visuals.
-          </p>
-        </details>
-
-        <details class="accordion">
-          <summary>Annabel &mdash; Data, Term Frequency, Citations</summary>
-          <p>
-            Annabel was responsible for data preparation, term-frequency analysis, and several core Python components. She 
-            worked with both the raw and cleaned datasets to ensure accuracy and consistency throughout the project. Annabel 
-            analyzed word frequency in song titles to identify common themes and shifts across different time periods. She also 
-            broke larger Python scripts into smaller, more readable sections. Along with her technical work, Annabel developed 
-            the research question and handled citations to ensure sources were properly documented.
-          </p>
-        </details>
-
-        <details class="accordion">
-          <summary>Sophia &mdash; Structure, Methods, Topic Modeling</summary>
-          <p>
-            Sophia focused on the overall structure, methodology, and reflection portions of the project. She wrote the Overview, 
-            Methods, and Integration and Reflection sections, helping explain the purpose of the project and how the analysis was 
-            conducted. Sophia also completed the topic modeling portion of the analysis, grouping song titles into themes to add 
-            another layer of interpretation beyond sentiment. Her work helped connect the technical results to broader course 
-            concepts.
-          </p>
-        </details>
-
-        <p>
-          Although responsibilities were divided, the project was highly collaborative. We regularly discussed results and 
-          interpretations together, especially when analyzing trends or connecting findings to real-world events. This shared 
-          approach helped ensure that the final project was consistent, balanced, and reflective of all group members’ contributions.
-        </p>
-      </div>
-    </section>
-
-    <section id="reflection" class="section">
-      <div class="container">
-        <h2>Integration and Reflection</h2>
-          <p>
-            One of the biggest takeaways from this project was realizing how much stronger our interpretation became once we combined computational methods with traditional humanities thinking. On their own, the numbers in the Spotify dataset didn’t immediately reveal a clear story. Energy percentages, valence scores, and BPM values are just isolated metrics until you put them into a cultural context. But once we paired those metrics with the emotional atmosphere of each event, and then added layers like sentiment scores, term-frequency comparisons, and topic modeling of song titles, the patterns became more meaningful. Coding helped us see trends that we wouldn’t have noticed from close reading alone, especially in terms of shifts in mood and energy across different types of events. 
-          </p>
-          <p>
-            At the same time, this project showed us the limitations of computational tools. For example, topic modeling generated clusters that needed real interpretation, especially because song titles are short and sometimes vague. The code could group similar words, but it couldn’t explain why listeners gravitated toward certain types of music during the Barbenheimer hype versus during more distressing moments like the Maui wildfires or the Hamas–Israel conflict. That part required human judgment, cultural awareness, and thoughtful analysis.
-          </p>
-          <p>
-            Overall, this project helped me understand what “digital humanities” actually looks like in practice. It’s not about choosing between data or interpretation; it’s about blending both to form stronger, more grounded insights. If we had more time, I’d want to expand the dataset to include full lyrics or longer time windows, which could reveal even deeper patterns. But even within this scope, the combination of coding and cultural analysis led to insights we couldn’t have reached using just one approach alone.
-          </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- ======================
-       FOOTER
-       ======================
-       Keeps navigation consistent and provides credit.
-  -->
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <p>Created by: Margaux Lawrence, Annabel Thompson, and Sophia Taglione</p>
-      <p>&copy; 2025 Spotify Streaming Analysis Project</p>
-      
-      <nav aria-label="Footer">
-        <a href="#home">Back to top</a>
-      </nav>
+      <p>
+        Although responsibilities were divided, the project was highly collaborative. We regularly discussed results and interpretations together, especially when analyzing trends or connecting findings to real-world events. This shared approach helped ensure that the final project was consistent, balanced, and reflective of all group members’ contributions.
+      </p>
     </div>
-  </footer>
+  </section>
+
+  <!-- FINDINGS -->
+  <section id="findings" class="section">
+  <div class="container">
+    <h2>Findings</h2>
+
+    <!-- Lead sentence -->
+    <p class="lead">
+      Our analysis shows that major global events are reflected in Spotify streaming behavior,
+      particularly through changes in musical mood, energy, and thematic focus.
+    </p>
+
+    <p>
+      By combining term-frequency analysis, topic modeling, and audio-based sentiment analysis, we found
+      evidence that listeners gravitate toward different types of music depending on the emotional
+      context of cultural moments. Rather than one single trend, the findings suggest that popular
+      music responds to global events through shifts in both sound and meaning.
+    </p>
+
+    <h3>Language and Thematic Patterns</h3>
+    <p>
+      From a language perspective, Annabel’s term-frequency analysis and Sophia’s topic modeling
+      revealed that song titles across the dataset tend to cluster around broad emotional themes such
+      as love, heartbreak, celebration, and reflection. While these themes remained relatively
+      consistent overall, the topic distribution chart showed clear differences in how dominant each
+      theme was. This suggests that the language of popular music does not drastically change during
+      major events, but the emphasis on certain themes becomes stronger or weaker depending on
+      cultural context. These findings support the idea that listeners continue to engage with
+      familiar musical narratives, even during times of crisis or uncertainty.
+    </p>
+
+    <h3>Audio-Based Sentiment Shifts</h3>
+    <p>
+      Audio-based analysis revealed clearer shifts in response to major events. Using features such
+      as danceability, BPM, energy, and valence, Margaux’s audio sentiment analysis showed noticeable
+      differences between celebratory and crisis-oriented contexts. The Barbenheimer release in July
+      2023 aligned with higher danceability, energy, and overall audio sentiment, reflecting the
+      upbeat and hype-driven nature of that cultural moment. In contrast, crisis-related events such
+      as the Maui wildfires, the Hamas–Israel conflict, and the Eastern Australian floods were
+      associated with lower or more restrained audio sentiment scores, indicating calmer, slower,
+      or more emotionally neutral music.
+    </p>
+
+    <p>
+      The event-level heatmap combining all audio features further supports this pattern. While
+      multiple 2023 events shared the same pool of songs due to dataset limitations, modeling each
+      event through different emotional lenses revealed meaningful variability. Crisis events showed
+      dampened energy and valence compared to celebratory contexts, suggesting that listeners may
+      subconsciously turn to less intense music during periods of distress. This supports our
+      research question by showing that musical attributes like tempo, energy, and mood shift in
+      ways that reflect collective emotional states surrounding global events.
+    </p>
+
+    <p>
+      Overall, these findings suggest that people use music not only for entertainment, but also as
+      an emotional outlet. While the language of popular songs remains relatively stable, their
+      musical qualities shift in response to the broader cultural atmosphere. Together, these
+      results demonstrate that Spotify streaming behavior reflects how listeners collectively
+      process moments of celebration, crisis, and uncertainty through sound.
+    </p>
+
+    <!-- Graph placeholders -->
+    <div class="media-row">
+  <!-- Graph 1 -->
+  <figure class="media-placeholder tall">
+    <a href="#graph1" aria-label="Open larger view of heatmap of sentiment by event">
+      <img src="images/SA_Heatmap.png" alt="Audio sentiment scores by event">
+    </a>
+    <figcaption>Heatmap of sentiment by event</figcaption>
+  </figure>
+
+  <!-- Graph 2 -->
+  <figure class="media-placeholder tall">
+    <a href="#graph2" aria-label="Open larger view of distribution of energy levels">
+      <img src="images/Distribution_of_energy_levels.png" alt="Energy levels across events">
+    </a>
+    <figcaption>Distribution of energy levels</figcaption>
+  </figure>
+
+  <!-- Graph 3 -->
+  <figure class="media-placeholder tall">
+    <a href="#graph3" aria-label="Open larger view of average tone features">
+      <img src="images/Average_tone_features.png" alt="Average tone features across events">
+    </a>
+    <figcaption>Average tone features</figcaption>
+  </figure>
+</div>
+
+<!-- LIGHTBOXES -->
+
+<!-- Lightbox 1 -->
+<div id="graph1" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#findings" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="images/SA_Heatmap.png" alt="Heatmap of sentiment by event, enlarged view">
+    <p class="lightbox-caption">Heatmap of sentiment by event</p>
+  </div>
+</div>
+
+<!-- Lightbox 2 -->
+<div id="graph2" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#findings" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="images/Distribution_of_energy_levels.png" alt="Distribution of energy levels, enlarged view">
+    <p class="lightbox-caption">Distribution of energy levels</p>
+  </div>
+</div>
+
+<!-- Lightbox 3 -->
+<div id="graph3" class="lightbox">
+  <div class="lightbox-content">
+    <a href="#findings" class="lightbox-close" aria-label="Close">&times;</a>
+    <img src="images/Average_tone_features.png" alt="Average tone features across events, enlarged view">
+    <p class="lightbox-caption">Average tone features</p>
+  </div>
+</div>
+
+  </div>
+</section>
+
+  <!-- REFLECTION -->
+  <section id="reflection" class="section">
+    <div class="container">
+      <h2>Integration and Reflection</h2>
+
+      <p>
+        This project demonstrated how combining computational tools with humanities-based
+        interpretation creates stronger, more grounded insights.
+      </p>
+
+      <details class="accordion">
+        <summary>Read full reflection</summary>
+        <p>
+          Coding alone revealed patterns, but interpretation gave them meaning.
+          Topic modeling and sentiment analysis were most effective when paired
+          with cultural context and close reading.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CITATIONS -->
+  <section id="citations" class="section alt">
+    <div class="container">
+      <h2>Citations</h2>
+      <ul class="citation-list">
+        <li>Abdullah, M. (2024). Spotify Most Streamed Songs. Kaggle.</li>
+        <li>Giese, G. (2023). A brief history of Barbenheimer.</li>
+        <li>Israel and Hamas Conflict In Brief. (2025).</li>
+        <li>Wikimedia Foundation. (2025). 2023 Hawaii wildfires.</li>
+        <li>Press, T. A. (2025). Eastern Australia floods. NPR.</li>
+        <li>ChatGPT (n.d.). Used for troubleshooting and clarification.</li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Created by Margaux Lawrence, Annabel Thompson, and Sophia Taglione</p>
+    <p>&copy; 2025 Spotify Streaming Analysis Project</p>
+  </div>
+</footer>
 
 </body>
 </html>
