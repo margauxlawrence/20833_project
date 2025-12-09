@@ -116,15 +116,24 @@ nav a:hover {
    SECTIONS
 ========================== */
 
+/* Base spacing + green divider between sections */
 .section {
   padding: 3rem 0;
-  background: var(--background);
+  border-top: 2px solid var(--spotify-green);
 }
 
-.section.alt {
-  background: #f0f4f3;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+/* No border above the very first section */
+.section:first-of-type {
+  border-top: none;
+}
+
+/* Alternate backgrounds automatically */
+.section:nth-of-type(odd) {
+  background: #ffffff;    /* white */
+}
+
+.section:nth-of-type(even) {
+  background: #f0f4f3;    /* light gray */
 }
 
 .section h2 {
@@ -414,7 +423,7 @@ tbody tr + tr {
 
 /* ==========================
    LIGHTBOX FOR GRAPHS
-   ========================== */
+========================== */
 
 .lightbox {
   position: fixed;
