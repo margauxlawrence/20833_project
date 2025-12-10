@@ -215,8 +215,7 @@ nav a:hover {
 }
 
 /* ==========================
-   IMAGE / GRAPH BLOCKS
-   (3 per row on desktop)
+   IMAGE / GRAPH BLOCKs
 ========================== */
 
 .media-row {
@@ -267,15 +266,13 @@ nav a:hover {
   margin-bottom: 0.4rem;
 }
 
-/* Slightly taller if you keep the .tall class */
 .media-placeholder.tall .img-placeholder {
   aspect-ratio: 4 / 3;
 }
 
-/* Real graph images */
 .media-placeholder img {
   width: 100%;
-  height: auto;           /* keep aspect ratio */
+  height: auto;          
   display: block;
   object-fit: contain;
 }
@@ -337,6 +334,36 @@ thead {
 
 tbody tr + tr {
   border-top: 1px solid var(--border);
+}
+
+/* ===============================
+   DATASET INFO LINKS
+================================ */
+
+.dataset-links {
+  list-style: none;
+  padding-left: 0;
+  margin: 1.25rem 0;
+}
+
+.dataset-links li {
+  margin-bottom: 0.6rem;
+}
+
+.dataset-links a {
+  color: var(--spotify-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dataset-links a:hover {
+  text-decoration: underline;
+}
+
+.dataset-note {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.75rem;
 }
 
 /* ==========================
