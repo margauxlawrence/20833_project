@@ -436,6 +436,102 @@ tbody tr + tr {
   padding: 1.5rem;
 }
 
+/* ===============================
+   NOTEBOOK SECTION – SPACIOUS, GREEN BORDER CARDS
+================================ */
+
+#notebooks {
+  margin-top: 4rem;    /* more breathing room above the section */
+  margin-bottom: 4rem; /* more space below */
+}
+
+/* Grid layout (3-up desktop, stacked mobile) */
+.notebook-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;   /* increased spacing between cards */
+  margin-top: 2.5rem;
+}
+
+/* Each notebook card */
+.notebook-card {
+  background: #ffffff;  /* white background */
+  padding: 1.75rem;
+  border-radius: 10px;
+
+  border: 3px solid var(--spotify-green);   /* Spotify green border */
+  box-shadow: var(--shadow-sm);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect: subtle lift */
+.notebook-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Card title */
+.notebook-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #000;
+}
+
+/* Card text */
+.notebook-card p {
+  margin-bottom: 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* "Open in Colab" button */
+.notebook-button {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+
+  padding: 0.55rem 1.15rem;
+  border-radius: 999px;
+
+  background-color: var(--spotify-green);
+  color: #fff;
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  border: none;
+  box-shadow: var(--shadow-sm);
+}
+
+/* Hover: Spotify light green */
+.notebook-button:hover,
+.notebook-button:focus {
+  background-color: var(--spotify-light-green);
+  box-shadow: var(--shadow-md);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 900px) {
+  .notebook-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+  }
+
+  .notebook-card {
+    padding: 1.4rem;
+  }
+}
+
 /* Show lightbox when its id is targeted in the URL (#graph1, etc.) */
 .lightbox:target {
   display: flex;
